@@ -1,10 +1,18 @@
 pipeline {
     agent none
 
+ tools{
+maven "MAVEN_HOME"
+
+}
+
     stages {
         stage('Build') {
             steps {
-                echo 'Build App'
+
+             git "https://github.com/jyotsnajadaun/CICDDemo.git"
+             bat "mvn -Dmaven.test.failure.ignore=true clean package"
+               // echo 'Build App'
             }
         }
         
