@@ -17,11 +17,11 @@ public class SmokeTests {
 	}
 
 	@Test
-	public void Test1() {
+	public void smokeTest1() {
 
 		 Assert.assertEquals("test", "test");
 		
-		System.out.println("Test is running");
+		System.out.println("Smoke Test is running");
 	}
 
 	@AfterMethod

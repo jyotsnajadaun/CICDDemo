@@ -10,7 +10,7 @@ maven "MAVEN_HOME"
         stage('Build') {
             steps {
 
-             git "https://github.com/jyotsnajadaun/CICDDemo.git"
+             git 'https://github.com/jyotsnajadaun/CICDDemo.git'
              bat "mvn -Dmaven.test.failure.ignore=true clean package"
                // echo 'Build App'
             }

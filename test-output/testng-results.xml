@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-05-25T14:05:00Z" name="Suite" finished-at="2022-05-25T14:05:00Z" duration-ms="23">
+  <suite started-at="2022-05-27T06:03:03Z" name="Suite" finished-at="2022-05-27T06:03:03Z" duration-ms="19">
     <groups>
     </groups>
-    <test started-at="2022-05-25T14:05:00Z" name="Test" finished-at="2022-05-25T14:05:00Z" duration-ms="23">
+    <test started-at="2022-05-27T06:03:03Z" name="Test" finished-at="2022-05-27T06:03:03Z" duration-ms="19">
       <class name="com.app.tests.SmokeTests">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.app.tests.SmokeTests@45d2ade3]" started-at="2022-05-25T14:05:00Z" name="setUp" finished-at="2022-05-25T14:05:00Z" duration-ms="5" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.app.tests.SmokeTests@45d2ade3]" started-at="2022-05-27T06:03:03Z" name="setUp" finished-at="2022-05-27T06:03:03Z" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="Test1()[pri:0, instance:com.app.tests.SmokeTests@45d2ade3]" started-at="2022-05-25T14:05:00Z" name="Test1" finished-at="2022-05-25T14:05:00Z" duration-ms="4" status="PASS">
+        <test-method signature="smokeTest1()[pri:0, instance:com.app.tests.SmokeTests@45d2ade3]" started-at="2022-05-27T06:03:03Z" name="smokeTest1" finished-at="2022-05-27T06:03:03Z" duration-ms="4" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Test1 -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.app.tests.SmokeTests@45d2ade3]" started-at="2022-05-25T14:05:00Z" name="tearDown" finished-at="2022-05-25T14:05:00Z" duration-ms="0" status="PASS">
+        </test-method> <!-- smokeTest1 -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.app.tests.SmokeTests@45d2ade3]" started-at="2022-05-27T06:03:03Z" name="tearDown" finished-at="2022-05-27T06:03:03Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

@@ -1,2 +1,3 @@
 CICDModule\CICDModule\AppTest.class
 com\app\tests\SmokeTests.class
+com\app\tests\RegressionTests.class
