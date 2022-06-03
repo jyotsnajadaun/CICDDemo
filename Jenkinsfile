@@ -11,7 +11,16 @@ pipeline {
         git(credentialsId: '2745393e-0cb2-4949-b21e-1b1983873ade', url: 'https://github.com/jyotsnajadaun/CICDDemo.git', branch: 'develop')
       }
     }
-
+stage('SonarQube Analysis') {
+            steps {
+                withSonarQubeEnv(credentialsId: 'NewToken',installationName:'Sonarqube'){
+                    withMaven(jdk: 'JAVA_HOME',maven: 'MAVEN_HOME') {
+                        bat 'mvn clean package sonar:sonar'
+                    }
+                
+                }
+            }
+        }
     stage('Test') {
       parallel {
         stage('Smoke Test') {
@@ -37,7 +46,13 @@ pipeline {
 
       }
     }
-
+stage('Quality Gate') {
+            steps {
+                timeout(time: 1, unit: 'MINUTES') {
+                waitForQualityGate abortPipeline: true
+              }
+            }
+        }
     stage('Result') {
       steps {
         junit '**/target/surefire-reports/TEST-*.xml'
