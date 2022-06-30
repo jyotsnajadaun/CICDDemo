@@ -43,6 +43,12 @@ pipeline {
         archiveArtifacts 'target/*.jar'
       }
     }
+    
+    stage('Upload Artifacts to Nexus') {
+      steps {
+        nexusArtifactUploader artifacts: [[artifactId: 'CICDModule', classifier: '', file: 'C:/Users/Jyoti_Yaduvanshi/.jenkins/workspace/Piepline4/target/CICDModule-0.0.1-SNAPSHOT.jar', type: 'jar']], credentialsId: '7f5ee454-6316-47df-995a-e0c682f88c27', groupId: 'CICDModuleTest', nexusUrl: 'localhost:8081/', nexusVersion: 'nexus3', protocol: 'http', repository: '/CICDDemo/', version: '0.0.1-SNAPSHOT'
+      }
+    }  
 
   }
   post {
